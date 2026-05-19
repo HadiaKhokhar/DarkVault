@@ -37,25 +37,24 @@ combined with real-world cybersecurity concepts.
 
 ## 🏗️ Project Architecture
 src/darkvault/
-├── Main.java                    ← Entry point, DB connection check
-├── model/
-│   ├── User.java                ← Encapsulated user data object
-│   └── Credential.java          ← Encapsulated credential data object
-├── service/
-│   ├── AuthService.java         ← Login and registration logic
-│   └── VaultService.java        ← CRUD operations for credentials
-├── database/
-│   └── DatabaseManager.java     ← JDBC singleton connection manager
-├── util/
-│   ├── EncryptionService.java   ← AES encrypt/decrypt + SHA-256 hash
-│   ├── PasswordGenerator.java   ← SecureRandom password generation
-│   └── StrengthAnalyzer.java    ← Password strength scoring
-└── gui/
-├── LoginFrame.java          ← Authentication screen
-├── DashboardFrame.java      ← Main application window
-├── VaultPanel.java          ← Credential management panel
-└── GeneratorPanel.java      ← Password tools panel
----
+├── Main.java               # Entry point, DB connection check
+├── model/                  # Encapsulated data objects
+│   ├── User.java           # User entity and details
+│   └── Credential.java     # Credential entity and details
+├── service/                # Business logic layer
+│   ├── AuthService.java    # Login and registration logic
+│   └── VaultService.java   # CRUD operations for credentials
+├── database/               # Database connectivity
+│   └── DatabaseManager.java# JDBC singleton connection manager
+├── util/                   # Helper classes and utilities
+│   ├── EncryptionService.java # AES encrypt/decrypt + SHA-256 hash
+│   ├── PasswordGenerator.java # SecureRandom password generation
+│   └── StrengthAnalyzer.java  # Password strength scoring
+└── gui/                    # Graphical User Interface components
+    ├── LoginFrame.java     # Authentication screen
+    ├── DashboardFrame.java # Main application window
+    ├── VaultPanel.java     # Credential management panel
+    └── GeneratorPanel.java # Password tools panel
 
 ## 🛠️ Technologies Used
 
